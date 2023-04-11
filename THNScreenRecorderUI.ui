@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1400</width>
+    <height>601</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1400</width>
+    <height>200</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="central_widget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1000</width>
+     <height>200</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="3" column="0">
+     <widget class="QWidget" name="w_edge_bottom_left" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>10</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QWidget" name="w_edge_bottom_right" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>10</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QWidget" name="w_edge_bottom" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>800</width>
+        <height>10</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QWidget" name="w_drag" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>800</width>
+        <height>200</height>
+       </size>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <spacer name="vertical_spacer_upper">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>10</width>
+           <height>10</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QWidget" name="w_edge_top_right" native="true"/>
+    </item>
+    <item row="1" column="1">
+     <widget class="QWidget" name="w_mask" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>800</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Fjalla One</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="leftMargin">
+        <number>4</number>
+       </property>
+       <property name="topMargin">
+        <number>4</number>
+       </property>
+       <property name="rightMargin">
+        <number>4</number>
+       </property>
+       <property name="bottomMargin">
+        <number>4</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="btn_bg_toggle">
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Toggle background visibility</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	color: rgb(240, 240, 240);
+	border: 2px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(47, 81, 101);
+}
+QPushButton:disabled {
+	color: rgb(95, 95, 95);
+}
+QPushButton:hover {
+	background-color: rgb(97, 179, 184);
+	border: 2px solid rgb(47, 81, 101);
+}
+QPushButton:pressed {	
+	background-color: rgb(47, 81, 101);
+	border: 2px solid rgb(97, 179, 184);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="../THN_gui/files.qrc">
+           <normaloff>:/48x48/icons/48x48/icons8-toggle-on-48.png</normaloff>:/48x48/icons/48x48/icons8-toggle-on-48.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>34</width>
+           <height>34</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="txtBox_clip_name">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>16</pointsize>
+           <weight>7</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="acceptDrops">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	font: 63 16pt &quot;Segoe UI&quot;;
+	color: rgb(240, 240, 240);
+	border: 2px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(47, 81, 101);
+	padding-left: 10px;
+}
+QLineEdit:hover {
+	border: 2px solid rgb(47, 81, 101);
+}
+QLineEdit:focus {
+	border: 2px solid rgb(91, 101, 124);
+}</string>
+         </property>
+         <property name="maxLength">
+          <number>32</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="ddl_project_list">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>160</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox{
+	color: rgb(240, 240, 240);	
+	border: 2px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(47, 81, 101);
+
+	padding: 5px;
+	padding-left: 10px;
+}
+QComboBox:disabled{
+	color: rgb(95, 95, 95);
+	border: 2px solid rgb(64, 71, 88);
+}
+QComboBox:hover{
+	border: 2px solid rgb(47, 81, 101);
+}
+QComboBox QAbstractItemView {
+	background-color: rgb(47, 81, 101);
+	border: 2px solid rgb(52, 59, 72);
+	padding: 10px;
+	color: rgb(220, 220, 220);
+	selection-background-color: rgb(39, 44, 54);
+}
+</string>
+         </property>
+         <property name="frame">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_record">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Start recording</string>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	color: rgb(240, 240, 240);
+	border: 2px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(47, 81, 101);
+}
+QPushButton:disabled {
+	color: rgb(95, 95, 95);
+}
+QPushButton:hover {
+	background-color: rgb(97, 179, 184);
+	border: 2px solid rgb(47, 81, 101);
+}
+QPushButton:pressed {	
+	background-color: rgb(47, 81, 101);
+	border: 2px solid rgb(97, 179, 184);
+}</string>
+         </property>
+         <property name="text">
+          <string>Record</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../THN_gui/files.qrc">
+           <normaloff>:/30x30/icons/30x30/icons8-record-30.png</normaloff>:/30x30/icons/30x30/icons8-record-30.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_pause">
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Pause recording</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	color: rgb(240, 240, 240);
+	border: 2px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(47, 81, 101);
+}
+QPushButton:disabled {
+	color: rgb(95, 95, 95);
+}
+QPushButton:hover {
+	background-color: rgb(97, 179, 184);
+	border: 2px solid rgb(47, 81, 101);
+}
+QPushButton:pressed {	
+	background-color: rgb(47, 81, 101);
+	border: 2px solid rgb(97, 179, 184);
+}</string>
+         </property>
+         <property name="text">
+          <string>Pause</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../THN_gui/files.qrc">
+           <normaloff>:/48x48/icons/48x48/icons8-pause-squared-48.png</normaloff>:/48x48/icons/48x48/icons8-pause-squared-48.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>34</width>
+           <height>34</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_cancel">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Cancel recording</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	color: rgb(240, 240, 240);
+	border: 2px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(47, 81, 101);
+}
+QPushButton:disabled {
+	color: rgb(95, 95, 95);
+}
+QPushButton:hover {
+	background-color: rgb(97, 179, 184);
+	border: 2px solid rgb(47, 81, 101);
+}
+QPushButton:pressed {	
+	background-color: rgb(47, 81, 101);
+	border: 2px solid rgb(97, 179, 184);
+}</string>
+         </property>
+         <property name="text">
+          <string>Cancel</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../THN_gui/files.qrc">
+           <normaloff>:/48x48/icons/48x48/icons8-stop-squared-48.png</normaloff>:/48x48/icons/48x48/icons8-stop-squared-48.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>34</width>
+           <height>34</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_review_folder">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Open review folder</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	color: rgb(240, 240, 240);
+	border: 2px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(47, 81, 101);
+}
+QPushButton:disabled {
+	color: rgb(95, 95, 95);
+}
+QPushButton:hover {
+	background-color: rgb(97, 179, 184);
+	border: 2px solid rgb(47, 81, 101);
+}
+QPushButton:pressed {	
+	background-color: rgb(47, 81, 101);
+	border: 2px solid rgb(97, 179, 184);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="../THN_gui/files.qrc">
+           <normaloff>:/24x24/icons/24x24/icons8-opened-folder-24.png</normaloff>:/24x24/icons/24x24/icons8-opened-folder-24.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_help">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Help</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	color: rgb(240, 240, 240);
+	border: 2px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(47, 81, 101);
+}
+QPushButton:disabled {
+	color: rgb(95, 95, 95);
+}
+QPushButton:hover {
+	background-color: rgb(97, 179, 184);
+	border: 2px solid rgb(47, 81, 101);
+}
+QPushButton:pressed {	
+	background-color: rgb(47, 81, 101);
+	border: 2px solid rgb(97, 179, 184);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="../THN_gui/files.qrc">
+           <normaloff>:/24x24/icons/24x24/icons8-question-mark-24.png</normaloff>:/24x24/icons/24x24/icons8-question-mark-24.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_exit">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Close window</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	color: rgb(240, 240, 240);
+	border: 2px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(47, 81, 101);
+}
+QPushButton:disabled {
+	color: rgb(95, 95, 95);
+}
+QPushButton:hover {
+	background-color: rgb(97, 179, 184);
+	border: 2px solid rgb(47, 81, 101);
+}
+QPushButton:pressed {	
+	background-color: rgb(47, 81, 101);
+	border: 2px solid rgb(97, 179, 184);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="../THN_gui/files.qrc">
+           <normaloff>:/24x24/icons/24x24/icons8-close-24.png</normaloff>:/24x24/icons/24x24/icons8-close-24.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="2" rowspan="2">
+     <widget class="QWidget" name="w_edge_right" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>10</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>10</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" rowspan="2">
+     <widget class="QWidget" name="w_edge_left" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>10</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>10</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QWidget" name="w_edge_topLeft" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>10</width>
+        <height>10</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>10</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QWidget" name="w_edge_top" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>800</width>
+        <height>10</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>10</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../THN_gui/files.qrc"/>
+ </resources>
+ <connections/>
+</ui>
