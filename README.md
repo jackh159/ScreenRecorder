@@ -1,20 +1,14 @@
 # Screen Recorder
 
-We have a custom screen recording tool that we use for reviewing purposes.
+Here we have a custom screen recording tool that we use for reviewing purposes.
 The goal of this tool is to allow each artist to:
 
 quickly take descriptive turntables or flythroughs of the current work,
 have the data automatically organized for easy and hassle-free playlist generation for daily reviews in the meeting room.
 
-# Install
-
-The recorder is part of the THN Review Tools suite, which you can get by simply running the installer batch file to copy everything from L:\Library\_tools the folder THN_ReviewTools to the root of your C: drive.
-
-THN_screenRecorder2.0 is a standalone executable file in the THN_ReviewTools\THN_screenRecorder2.0 folder.
-
 # Usage
 
-After using the shortcut or clicking on the THN_screenRecorder2.0 file itself (C:\THN_ReviewTools\THN_screenRecorder2.0),  the screen recording frame pops up (green frame border).
+When launching the tool from the latest build .exe or from THNScreenRecorderMain.py, the screen recording frame pops up (green frame border).
 
 Place the frame properly to best showcase your contents (no specific aspect ratio is required, it will be conformed automatically).
 
