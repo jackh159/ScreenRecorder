@@ -1,9 +1,7 @@
 # Screen Recorder
 
 Here we have a custom screen recording tool that we use for reviewing purposes.
-The goal of this tool is to allow each artist to:
-
-quickly take descriptive turntables or flythroughs of the current work,
+The goal of this tool is to allow each artist to quickly take descriptive turntables or flythroughs of the current work,
 have the data automatically organized for easy and hassle-free playlist generation for daily reviews in the meeting room.
 
 # Usage
